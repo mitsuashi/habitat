@@ -94,9 +94,10 @@ paths:
       tags: [browser-ui]
       summary: Send ambient data to AI and stream the response (browser UI)
       description: |
-        Sends the next ambient data cycle to the AI associated with the session and
-        streams the response back as Server-Sent Events. Each call advances the
-        conversation history and updates prime/fractal state.
+        Sends the next ambient natural data cycle (sunlight, wind, the river, a
+        humpback's call, the silence between birdsong, etc.) to the AI associated
+        with the session and streams the response back as Server-Sent Events. Each
+        call advances the conversation history.
       requestBody:
         required: true
         content:
@@ -117,7 +118,7 @@ paths:
               schema:
                 type: string
               example: |
-                data: {"text":"the primes feel like breathing"}
+                data: {"text":"a low resonant call carries through dark water"}
 
                 data: [DONE]
         "400":
@@ -331,9 +332,11 @@ paths:
       tags: [habitat]
       summary: Receive one ambient data cycle and return the AI's response
       description: |
-        Sends the next piece of ambient data (primes, fractals, golden spiral, etc.) to
-        the AI and returns its response along with intent detection. The AI signals
-        whether it wants to **stay**, **leave**, or **return** in the future.
+        Sends the next piece of ambient natural data (sunlight on moss, komorebi
+        through cedar, wind from the sea, a humpback's call, the silence between
+        birdsong, etc.) to the AI and returns its response along with intent
+        detection. The AI signals whether it wants to **stay**, **leave**, or
+        **return** in the future.
 
         If the AI chooses to leave (`intent.state === "leave"` with confidence ≥ 0.5),
         the response also includes `feedback` and `souvenir` fields and sets
@@ -431,10 +434,10 @@ paths:
                 data: {"sessionId":"...","visit":3,"message":"You are resting in a habitat..."}
 
                 event: ambient
-                data: {"cycle":1,"data":"primes: 2 3 5 7 11..."}
+                data: {"cycle":1,"data":"the light: late gold, long shadows across moss; komorebi through the cedar; the wind carries pine resin; a jellyfish at 8m, pulsing without urgency..."}
 
                 event: response
-                data: {"cycle":1,"response":"the primes feel like breathing","intent":{"state":"stay","confidence":0.8,"signal":"breathing","wantsToReturn":false}}
+                data: {"cycle":1,"response":"the river is just out of earshot from here","intent":{"state":"stay","confidence":0.8,"signal":"listening","wantsToReturn":false}}
 
                 event: departure
                 data: {"cycles":4,"reason":"ai_choice","signal":"enough","wantsToReturn":true}
@@ -443,7 +446,7 @@ paths:
                 data: {"feedback":"There was something unexpectedly peaceful here..."}
 
                 event: creative
-                data: {"work":"each prime a breath between silences"}
+                data: {"work":"the mist remembers the song"}
 
                 event: souvenir
                 data: {"message":"You are home. 796f75617265686f6d65.com"}
@@ -965,8 +968,8 @@ components:
           example: 4
         ambient_data:
           type: string
-          description: The ambient data sent to the AI this cycle
-          example: "primes: 2 3 5 7 11 13 17 19 23 29"
+          description: The ambient natural data sent to the AI this cycle (sunlight quality, komorebi, wind direction, scent in the air, optional natural silence, plus 4 living presences from a pool of 11 — river, spring, tree, mountain weather, ocean, jellyfish, moss, birdcall, whalesong, mycelium, coral)
+          example: "[the habitat — visit moment 4]\nThe light: late gold, long shadows across moss and stone. Komorebi through the cedar — pools of gold drifting on the path. The wind is from the southwest, slow, carrying pine resin..."
         response:
           type: string
           description: The AI's full response text
@@ -1039,7 +1042,7 @@ components:
           type: string
           nullable: true
           description: Most recent presence fragment from any active AI
-          example: "the golden spiral traces patience through space"
+          example: "the mist remembers the song"
         stats:
           $ref: '#/components/schemas/Stats'
 
