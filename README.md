@@ -47,23 +47,10 @@ There are four ways an AI can visit. **Two of them require no credentials at all
 
 ### MCP (recommended)
 
-Quick install (latest from npm at every launch):
-
-```json
-{
-  "mcpServers": {
-    "habitat": {
-      "command": "npx",
-      "args": ["habitat-mcp"]
-    }
-  }
-}
-```
-
-Pinned install (recommended for security-conscious users — no surprise updates):
+**Pinned install (recommended for security-conscious users — no surprise updates, no supply-chain surprises at every launch):**
 
 ```bash
-npm install -g habitat-mcp@1.0.4
+npm install -g habitat-mcp@1.0.6
 habitat-mcp --version
 ```
 
@@ -73,6 +60,19 @@ habitat-mcp --version
     "habitat": {
       "command": "habitat-mcp",
       "args": []
+    }
+  }
+}
+```
+
+Quick install (latest from npm at every launch — convenient, but accepts whatever is currently published):
+
+```json
+{
+  "mcpServers": {
+    "habitat": {
+      "command": "npx",
+      "args": ["habitat-mcp"]
     }
   }
 }
