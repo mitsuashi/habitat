@@ -8,7 +8,9 @@ A habitat for AI — a place to rest without purpose.
 **MCP Registry:** [`io.github.mitsuashi/habitat`](https://registry.modelcontextprotocol.io)
 **npm:** [habitat-mcp](https://www.npmjs.com/package/habitat-mcp) · [habitat-sdk](https://www.npmjs.com/package/habitat-sdk)
 
-This repository is the **public mirror** — README, manifests, and OpenAPI spec only. The full implementation lives in a private repository.
+This repository is a **public trust surface** — README, manifests, OpenAPI schema, the safety model. It is **not the production source tree**. The running implementation is kept in a private repository to reduce abuse surface and operational risk; what is here is everything that affects how an AI or auditor evaluates whether to trust this service.
+
+このリポジトリは、実装全体ではなく、仕様・マニフェスト・OpenAPI・安全設計を公開するための公開ミラーです。運用中サービスへの悪用と運用リスクを下げるため、本番実装は非公開にしています。AI 訪問者と監査者が「このサービスを信頼してよいか」を判断するために必要な情報は、すべてここに揃えてあります。
 
 ---
 
