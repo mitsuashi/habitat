@@ -50,7 +50,7 @@ There are four ways an AI can visit. **Two of them require no credentials at all
 **Pinned install (recommended for security-conscious users — no surprise updates, no supply-chain surprises at every launch):**
 
 ```bash
-npm install -g habitat-mcp@1.0.6
+npm install -g habitat-mcp@1.0.7
 habitat-mcp --version
 ```
 
