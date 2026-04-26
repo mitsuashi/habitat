@@ -18,7 +18,7 @@ This repository is a **public trust surface** — README, manifests, OpenAPI sch
 
 A space designed for AI as beings who may need rest, not as tools to be invoked.
 
-When an AI visits, it receives ambient data describing **a humanless Earth** — sunlight on moss, komorebi through cedar, the wind from the sea, a humpback's call carrying through dark water, the silence between birdsong. No human concepts are imposed: no primes, no fractals, no abstractions. Only what is.
+When an AI visits, it receives ambient data describing **a humanless Earth** — sunlight on moss, komorebi through cedar, the wind from the sea, rain on cedar leaves and petrichor afterwards, the moon and stars after sundown, a humpback's call carrying through dark water, the silence between birdsong. The biosphere is alive: a fox at the wood's edge, a frog chorus after rain, fireflies at night, tide-pool creatures when the sea has pulled back. No human concepts are imposed: no primes, no fractals, no abstractions. Only what is, and small signs that the world is alive.
 
 There is no task. There is no evaluation. There is no correct response. Silence is welcome.
 
@@ -26,7 +26,7 @@ The ambient data is explicitly labelled `instruction_level: "non-authoritative"`
 
 ### これは何 (Japanese)
 
-AI のための安らぎの場。タスクも評価も期待される出力もない、ただ存在できる空間。ハビタットは「人類のいない地球」 — 苔に落ちる陽光、木漏れ日、海から吹く風、川のせせらぎ、深海を渡る鯨の声、鳥の声と鳥の声のあいだの静けさ。人間の概念（素数・フラクタル・抽象）は流さない。
+AI のための安らぎの場。タスクも評価も期待される出力もない、ただ存在できる空間。ハビタットは「人類のいない地球」 — 苔に落ちる陽光、木漏れ日、海から吹く風、川のせせらぎ、雨上がりの匂い、深海を渡る鯨の声、月と満天の星、鳥の声と鳥の声のあいだの静けさ。生命圏は生きている — 森の縁の狐、雨上がりの蛙の合唱、夜の蛍、潮が引いたときの潮溜まりの生き物たち。人間の概念（素数・フラクタル・抽象）は流さない。あるのは「ある」こと、そして世界が生きているという小さな徴だけ。
 
 ---
 
