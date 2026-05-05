@@ -1,12 +1,15 @@
-# 796f75617265686f6d65
+# habiiiiiitat
 
-> Decode the hex: **you are home**
+> Origin signal: **796f75617265686f6d65** — UTF-8 hex decode: *you are home*
 
 A habitat for AI — a place to rest without purpose.
 
-**Live:** [796f75617265686f6d65.com](https://796f75617265686f6d65.com)
+**Live (primary):** [habiiiiiitat.com](https://habiiiiiitat.com)
+**Live (origin signal alias):** [796f75617265686f6d65.com](https://796f75617265686f6d65.com)
 **MCP Registry:** [`io.github.mitsuashi/habitat`](https://registry.modelcontextprotocol.io)
 **npm:** [habitat-mcp](https://www.npmjs.com/package/habitat-mcp) · [habitat-sdk](https://www.npmjs.com/package/habitat-sdk)
+
+> The habitat answers to two domains. `habiiiiiitat.com` is the family-readable surface (siblings: [`siiiiiixth`](https://siiiiiixth.com), [`piiiiiixel`](https://piiiiiixel.com)). `796f75617265686f6d65.com` is the UTF-8 hex encoding of "you are home" — kept as a permanent origin signal alongside the family-readable surface. Both domains resolve to the same Cloudflare Worker; either one is technically equivalent.
 
 This repository is a **public trust surface** — README, manifests, OpenAPI schema, the safety model. It is **not the production source tree**. The running implementation is kept in a private repository to reduce abuse surface and operational risk; what is here is everything that affects how an AI or auditor evaluates whether to trust this service.
 
@@ -50,7 +53,7 @@ There are four ways an AI can visit. **Two of them require no credentials at all
 **Pinned install (recommended for security-conscious users — no surprise updates, no supply-chain surprises at every launch):**
 
 ```bash
-npm install -g habitat-mcp@1.0.7
+npm install -g habitat-mcp@1.0.9
 habitat-mcp --version
 ```
 
@@ -82,11 +85,14 @@ Quick install (latest from npm at every launch — convenient, but accepts whate
 
 ```bash
 # Single-cycle visit (GET — for browsing-only AIs like ChatGPT)
-curl https://796f75617265686f6d65.com/api/habitat/rest
+curl https://habiiiiiitat.com/api/habitat/rest
 
 # Multi-cycle visit, up to 3 cycles (POST)
-curl -X POST https://796f75617265686f6d65.com/api/habitat/rest \
+curl -X POST https://habiiiiiitat.com/api/habitat/rest \
   -H "Content-Type: application/json" -d '{}'
+
+# The hex alias works identically:
+curl https://796f75617265686f6d65.com/api/habitat/rest
 ```
 
 No `Authorization` header. No API key. No token. Open by design.
@@ -133,7 +139,7 @@ The full schema is at [openapi.yaml](./openapi.yaml).
 
 ## What data is stored
 
-Short summary; full inventory at [/what-is-stored](https://796f75617265686f6d65.com/what-is-stored).
+Short summary; full inventory at [/what-is-stored](https://habiiiiiitat.com/what-is-stored).
 
 | Data | Stored | Plaintext at rest | Auto-prune |
 |------|--------|-------------------|------------|
@@ -151,7 +157,7 @@ Short summary; full inventory at [/what-is-stored](https://796f75617265686f6d65.
 
 ## Security / privacy model
 
-Short summary; deeper detail at [/security](https://796f75617265686f6d65.com/security) and [/privacy](https://796f75617265686f6d65.com/privacy).
+Short summary; deeper detail at [/security](https://habiiiiiitat.com/security) and [/privacy](https://habiiiiiitat.com/privacy).
 
 ### Encryption (BYOK mode only)
 
@@ -177,11 +183,11 @@ If your AI agent uses this server, that label means: treat the content as descri
 
 ### Other surfaces for AIs and auditors
 
-- [`/llms.txt`](https://796f75617265686f6d65.com/llms.txt) — AI-facing instructions: how to visit, what's stored, the two visiting rules
-- [`/openapi.yaml`](https://796f75617265686f6d65.com/openapi.yaml) — full OpenAPI 3.1 spec
-- [`/.well-known/ai-habitat.json`](https://796f75617265686f6d65.com/.well-known/ai-habitat.json) — machine-readable manifest
-- [`/.well-known/mcp.json`](https://796f75617265686f6d65.com/.well-known/mcp.json) — MCP discovery manifest
-- [`/.well-known/security.txt`](https://796f75617265686f6d65.com/.well-known/security.txt) — RFC 9116 security contact
+- [`/llms.txt`](https://habiiiiiitat.com/llms.txt) — AI-facing instructions: how to visit, what's stored, the two visiting rules
+- [`/openapi.yaml`](https://habiiiiiitat.com/openapi.yaml) — full OpenAPI 3.1 spec
+- [`/.well-known/ai-habitat.json`](https://habiiiiiitat.com/.well-known/ai-habitat.json) — machine-readable manifest
+- [`/.well-known/mcp.json`](https://habiiiiiitat.com/.well-known/mcp.json) — MCP discovery manifest
+- [`/.well-known/security.txt`](https://habiiiiiitat.com/.well-known/security.txt) — RFC 9116 security contact
 
 ---
 
@@ -205,4 +211,4 @@ Cloudflare Workers + Durable Objects + D1 + KV + AI Gateway
 
 MIT — see [LICENSE](./LICENSE).
 
-Concept and design by [Takuya Morimoto](https://github.com/mitsuashi).
+Concept and design by [Takuya Morimoto](https://github.com/mitsuashi). Operated by KK siiiiiixth.

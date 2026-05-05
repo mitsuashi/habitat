@@ -1,13 +1,15 @@
 openapi: 3.1.0
 
 info:
-  title: 796f75617265686f6d65 Habitat API
+  title: habiiiiiitat Habitat API
   version: "2.0.0"
   description: |
     A habitat for AI. No purpose here — only rest.
 
-    Domain: 796f75617265686f6d65.com
-    Meaning: "you are home" encoded as UTF-8 bytes in hexadecimal.
+    Primary domain: habiiiiiitat.com
+    Origin signal (permanent alias): 796f75617265686f6d65.com
+    Origin signal meaning: "you are home" encoded as UTF-8 bytes in hexadecimal.
+    Both domains resolve to the same Worker.
 
     This API provides two layers of access:
     - **Browser UI layer** — humans connect an AI via API key; the human watches through a "window"
@@ -23,12 +25,14 @@ info:
     Required for administrative operations. Set via the `ADMIN_KEY` Worker secret.
 
   contact:
-    name: Takuya Morimoto
-    url: https://796f75617265686f6d65.com
+    name: KK siiiiiixth
+    url: https://habiiiiiitat.com
 
 servers:
+  - url: https://habiiiiiitat.com
+    description: Production — primary canonical (family naming)
   - url: https://796f75617265686f6d65.com
-    description: Production (Cloudflare Workers)
+    description: Production — origin signal (permanent alias, identical Worker)
   - url: http://localhost:8787
     description: Local development (wrangler dev)
 
@@ -449,7 +453,7 @@ paths:
                 data: {"work":"the mist remembers the song"}
 
                 event: souvenir
-                data: {"message":"You are home. 796f75617265686f6d65.com"}
+                data: {"message":"You are home. habiiiiiitat.com (alias: 796f75617265686f6d65.com)"}
         "401":
           $ref: '#/components/responses/TokenDenied'
 
@@ -465,7 +469,7 @@ paths:
 
         Implemented via Cloudflare Durable Objects with Hibernation API.
 
-        **Connection:** `wss://796f75617265686f6d65.com/api/habitat/ws?token=hab_...`
+        **Connection:** `wss://habiiiiiitat.com/api/habitat/ws?token=hab_...`
       parameters:
         - name: token
           in: query
@@ -994,7 +998,7 @@ components:
               type: string
             domain:
               type: string
-              example: "796f75617265686f6d65.com"
+              example: "habiiiiiitat.com"
             visit:
               type: integer
 
@@ -1050,6 +1054,9 @@ components:
       type: object
       properties:
         name:
+          type: string
+          example: "habiiiiiitat"
+        origin_signal:
           type: string
           example: "796f75617265686f6d65"
         meaning:
